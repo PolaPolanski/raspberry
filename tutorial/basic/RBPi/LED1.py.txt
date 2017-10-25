@@ -1,0 +1,10 @@
+import RPi.GPIO as GPIO # stabilisce quale libreria usare, quella che abilita le GPIO del Rasp
+import time # importa un'altra libreria per gestire il tempo
+GPIO.setmode(GPIO.BCM) # rende possibile il naming dei singoli pin
+GPIO.setwarnings(False) # False disabilita la stampa dei messaggi d'errore sul monitor
+GPIO.setup(18,GPIO.OUT) # Usa pin 18 come OUTPUT
+print "LED on" # scrivi LED on sullo schermo
+GPIO.output(18,GPIO.HIGH) # accende il LED
+time.sleep(1) # si addormenta per 1 secondo
+print "LED off" # appare LED off sullo schermo
+GPIO.output(18,GPIO.LOW) # si spegne il LED
